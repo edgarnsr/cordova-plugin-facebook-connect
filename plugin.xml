@@ -50,7 +50,6 @@
             <access origin="https://*.fbcdn.net" />
             <access origin="https://*.akamaihd.net" />
             <preference name="android-minSdkVersion" value="15" />
-            <resource-file src="build" target="build.gradle" />
         </config-file>
 
         <source-file src="src/android/facebookconnect.xml" target-dir="res/values" />
@@ -72,7 +71,7 @@
               android:label="@string/fb_app_name" />
         </config-file>
 
-        <framework src="com.facebook.android:facebook-android-sdk:$FACEBOOK_ANDROID_SDK_VERSION"/>
+        <framework src="build.gradle" custom="true" type="gradleReference"/>
 
         <!-- cordova plugin src files -->
         <source-file src="src/android/ConnectPlugin.java" target-dir="src/org/apache/cordova/facebook" />
